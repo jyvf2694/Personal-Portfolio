@@ -3,16 +3,17 @@
 ------------------------*/
 #contact{
     color: $white;
-    padding: 100px 0;
+    padding: 90px 0;
     padding-bottom: 40px;
     border-top: 5px solid $skyblue;
     background-color: $charcoal;
     @media (max-width: $mobile){
-        padding: 70px 0;
+        padding: 70px 0 15px 0;
+
     }
     .section-header{
         text-align: center;
-        margin-bottom: 80px;
+        margin-bottom: 70px;
         p{
             opacity: .6;
         }
@@ -37,7 +38,7 @@
                 }
                 input,
                 textarea{
-                    width: 200px;
+                    width: 250px;
                     height: auto;
                     padding: 10px 15px;
                     color: $white;

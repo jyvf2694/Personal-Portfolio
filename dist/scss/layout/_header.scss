@@ -16,6 +16,9 @@
         .container{
             padding: 15px 0;
             transition: padding .25s ease-out;
+            @media (max-width: $mobile){
+                padding: 10px 0;
+            }
         }
         &.scrolled{
             background-color: $white;
@@ -58,8 +61,48 @@
                 box-shadow: none;
                 border-radius: 0;
                 border: 1px solid $gray;
-                .icon-bar{
-                    background-color: $gray;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &[aria-expanded="true"] .navbar-toggler-icon::before{
+                    top: 45%;
+                    transform: rotate(45deg);
+                }
+                &[aria-expanded="true"] .navbar-toggler-icon div{
+                    opacity: 0;
+                }
+                &[aria-expanded="true"] .navbar-toggler-icon::after{
+                    bottom: 50%;
+                    transform: rotate(-45deg);
+                }
+                .navbar-toggler-icon{
+                    width: 25px;
+                    height: 17.5px;
+                    display: block;
+                    position: relative;
+                    background-image: none;
+                    &:before,
+                    &:after,
+                    div{
+                        content: "";
+                        left: 0;
+                        width: 25px;
+                        height: 1.5px;
+                        position: absolute;
+                        transition: all 0.25s ease;
+                        background-color: $gray;
+                    }
+                    &:before{
+                        top: 0;
+                    }
+                    div{
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    &:after{
+                        bottom: 0;
+                    }
                 }
             }
             .navbar-brand{
@@ -89,11 +132,15 @@
                         display: block;
                         text-align:  center;
                     }
-                    &.active{
+                    &.active,
+                    &:hover{
                         .nav-link{
                             &:before{
                                 opacity: 1;
                                 bottom: 10px;
+                            }
+                            @media (max-width: $tablet){
+                                color: $skyblue;
                             }
                         }
                     }
@@ -126,16 +173,6 @@
                             @media (max-width: $tablet){
                                 display: none;
                             }
-                        }
-                        &:hover,
-                        &.active{
-                            @media (max-width: $tablet){
-                                color: $skyblue;
-                            } 
-                        }
-                        &:hover:before{
-                            opacity: 1;
-                            bottom: 10px;
                         }
                     }
                 }

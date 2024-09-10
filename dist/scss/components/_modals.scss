@@ -2,6 +2,7 @@
 ----Project Modal ----------
 ----------------------------*/
 #project-modal{
+    background-color: rgba(0, 0, 0, .75);
     &.fade{
         overflow-x: hidden;
         .modal-dialog{
@@ -17,15 +18,15 @@
         }
     }  
     .modal-dialog{
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
+        width: 85%;
+        max-width: 85%;
         padding: 0;
+        margin: 70px auto;
         .modal-content{
             width: 100%;
             border: none;
             box-shadow: none;
-            border-radius: 0;
+            border-radius: 10px;
             background-color: $white;
             .modal-header{
                 width: 100%;
@@ -37,11 +38,15 @@
                 text-align: center;
                 background-color:$skyblue;
                 .close{
+                    top: 20px;
+                    right: 5px;
                     opacity: 1;
                     margin-top: 0;
                     color: inherit;
                     font-size: 3.25rem;
+                    line-height: 0;
                     border: none;
+                    position: absolute;
                     transition: all .2s ease-out;
                     background-color: transparent;
                     &:hover{
@@ -49,7 +54,8 @@
                     }
                 }
                 #hdr-title{
-                    margin-bottom: 40px;
+                    margin-top: 20px;
+                    margin-bottom: 30px;
                 }
                 .image-wrapper{
                     overflow: hidden;
@@ -100,8 +106,9 @@
             }
             .modal-body{
                 margin: 0;
-                padding: 60px 0 20px;
+                padding-top: 35px;
                 #project-sidebar{
+                    display: none;
                     margin-bottom: 40px;
                     p{
                         margin-bottom: 10px;
@@ -120,6 +127,13 @@
                     }
                     #sdbr-client:before{
                         content: "\f0ac";
+                    }
+                }
+                #project-content{
+                    width: 100%;
+                    padding: 0 30px;
+                    @media (max-width: $mobile){
+                        padding: 0;
                     }
                 }
             }

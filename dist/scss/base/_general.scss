@@ -6,7 +6,25 @@ body{
 	font-size: 1.125rem;
 	font-weight: 300;
 	overflow-x: hidden;
+    position: relative;
     font-family: $titillium-web;
+    &:before {
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        transition: opacity .25s ease;
+        background-color: rgba(0, 0, 0, .75);
+    }
+    &.open{
+        &:before{
+            opacity: 1;
+            z-index: 999;
+        }
+    }
 }
 
 /*----------------------

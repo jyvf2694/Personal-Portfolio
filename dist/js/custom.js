@@ -20,9 +20,13 @@ $(document).ready(function(){
 	/*============================================
 	ScrollTo Links
 	==============================================*/
+	$('.nav-link').click(function(e){
+		$('body').removeClass('open');
+		$('.navbar-collapse').collapse('hide');
+	});
+
     var sections = $('section');
     var navItems = $('.nav-item');
-
     $(window).on('scroll', function () {
         var currentScroll = $(this).scrollTop() + 50;
 
@@ -39,6 +43,10 @@ $(document).ready(function(){
             }
         });
     });
+
+	$('header .navbar-toggler').click(function(){
+		$('body').toggleClass('open');
+	});
 
 	/*============================================
 	Banner Text Rotator
