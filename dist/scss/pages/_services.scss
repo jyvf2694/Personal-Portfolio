@@ -1,0 +1,47 @@
+/*----------------------
+-----Services ----------
+------------------------*/  
+#services{
+    padding: 100px 0;
+    background-color: $white;
+    @media (max-width: $mobile){
+        padding: 70px 0;
+    }
+    .section-header{
+        margin-bottom: 80px;
+        text-align: center;
+    }
+    .section-content{
+        .item{
+            margin-bottom: 30px;
+            text-align: center;
+            &:last-child{
+                @media (max-width: $mobile){
+                    margin-bottom: 0;
+                }
+                p{
+                    @media (max-width: $mobile){
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            &:hover{
+                h2{
+                    color: $skyblue;
+                }
+                .icon{
+                    transform: translateY(-10px);
+                    transition: transform .4s ease-out;
+                }
+            }
+            .icon{
+                margin: 0 auto 30px;
+                transition: all .25s ease-out;
+            }
+            h2{
+                font-size: 1.5rem;
+                transition: all .25s ease-out;
+            }
+        }
+    }
+}

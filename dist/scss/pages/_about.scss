@@ -1,0 +1,56 @@
+/*----------------------
+-----About -------------
+------------------------*/  
+#about{
+    color: $white;
+    padding: 100px 0;
+    background-color: $charcoal;
+    @media (max-width: $mobile){
+        padding: 70px 0;
+    }
+    .section-header{
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .section-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            margin-bottom: 40px;
+            border-radius: 50%;
+            border: 15px solid transparent;
+            box-shadow: 5px 3px 0 rgba(255,255,255,.6);
+        }
+        p{
+            width: 80%;
+            margin: 0 auto;
+            padding-bottom: 15px;
+
+            font-size: 1.25rem;
+            line-height: 27px;
+            text-align: center;
+            @media (max-width: $desktop_991){
+                width: 100%;
+            }
+        }
+    }
+    .section-footer{
+        text-align: center;
+        .btn{
+            margin-left: 5px;
+            margin-right: 5px;
+            &:last-child{
+                @media (max-width: $mobile){
+                    margin-top: 5px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+
+.project-item.hidden {
+    display: none !important;
+}

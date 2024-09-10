@@ -1,0 +1,128 @@
+/*--------------------------
+----Project Modal ----------
+----------------------------*/
+#project-modal{
+    &.fade{
+        overflow-x: hidden;
+        .modal-dialog{
+            opacity: 0;
+            transition: all .5s;
+            transform: translateY(2000px);
+        }
+    }
+    &.show{
+        .modal-dialog{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }  
+    .modal-dialog{
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        .modal-content{
+            width: 100%;
+            border: none;
+            box-shadow: none;
+            border-radius: 0;
+            background-color: $white;
+            .modal-header{
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                padding-top: 40px;
+                color: $white;
+                border: none;
+                text-align: center;
+                background-color:$skyblue;
+                .close{
+                    opacity: 1;
+                    margin-top: 0;
+                    color: inherit;
+                    font-size: 3.25rem;
+                    border: none;
+                    transition: all .2s ease-out;
+                    background-color: transparent;
+                    &:hover{
+                        opacity: .8;
+                    }
+                }
+                #hdr-title{
+                    margin-bottom: 40px;
+                }
+                .image-wrapper{
+                    overflow: hidden;
+                    position: relative;
+                    & > img{
+                        width: 100%;
+                        height: auto;
+                    }
+                    .loader{
+                        top: 0;
+                        left: 50%;
+                        width: 35px;
+                        height: 35px;
+                        z-index: 1;
+                        margin-top: 30%;
+                        margin-left: -18px;
+                        position: absolute;
+                        background: url('../../dist/img/others/loader.gif');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: contain;
+                        
+                    }
+                    .screen{
+                        top: 10.5%;
+                        width: 100%;
+                        height: auto;
+                        margin: 0;
+                        padding: 0;
+                        opacity: 0;
+                        z-index: 2;
+                        border: none;
+                        box-shadow: none;
+                        position:absolute;
+                        box-sizing: padding-box;
+                        transition: all .5s ease-out .7s;
+                        &.done{
+                            opacity: 1;
+                        }
+                        .single-image{
+                            img{
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+            .modal-body{
+                margin: 0;
+                padding: 60px 0 20px;
+                #project-sidebar{
+                    margin-bottom: 40px;
+                    p{
+                        margin-bottom: 10px;
+                        &:before{
+                            width: 20px;
+                            margin-right: 10px;
+                            display: inline-block;
+                            font-family: $fontawesome;
+                        }
+                    }
+                    #sdbr-descr{
+                        margin-top: 30px;
+                    }
+                    #sdbr-category:before{
+                        content: "\f115";
+                    }
+                    #sdbr-client:before{
+                        content: "\f0ac";
+                    }
+                }
+            }
+        }
+    }
+}

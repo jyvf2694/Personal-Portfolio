@@ -1,0 +1,29 @@
+//vendors
+
+//abstracts
+@import 'abstracts/variables';
+
+//base
+@import 'base/fonts';
+@import 'base/general';
+
+//components
+@import 'components/animations';
+@import 'components/buttons';
+@import 'components/elements';
+@import 'components/modals';
+
+//layout
+@import 'layout/header';
+@import 'layout/footer';
+
+//pages
+@import 'pages/about';
+@import 'pages/banner';
+@import 'pages/contact';
+@import 'pages/project';
+@import 'pages/portfolio';
+@import 'pages/services';
+@import 'pages/skills';
+
+//themes

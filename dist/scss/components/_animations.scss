@@ -1,0 +1,77 @@
+/*-----------------------
+---Animations------------
+-------------------------*/
+.scrollimation.fade-in{
+	opacity: 0;
+	transition: opacity .6s ease-out;
+}
+.scrollimation.fade-in.in{
+	opacity: 1;
+}
+.scrollimation.scale-in{
+	opacity: 0;
+	transform: scale(.5);
+	transition: transform .6s cubic-bezier(.17,.89,.67,1.57), opacity .6s ease-out;
+}
+.scrollimation.scale-in.in{
+	opacity: 1;
+	transform: scale(1);
+}
+.scrollimation.fade-right{
+	opacity: 0;
+	transform: translateX(-100px);
+	transition: transform .4s ease-out, opacity .4s ease-out;
+}
+.scrollimation.fade-right.in{
+	opacity: 1;
+	transform: translateX(0);
+}
+.scrollimation.fade-left{
+	opacity: 0;
+	transform: translateX(100px);
+	transition: transform .4s ease-out, opacity .4s ease-out;
+}
+.scrollimation.fade-left.in{
+	opacity: 1;
+	transform: translateX(0);
+}
+.scrollimation.fade-up{
+	opacity: 0;
+	transform: translateY(100px);
+	transition: transform .4s ease-out, opacity .4s ease-in-out;
+}
+.scrollimation.fade-up.in{
+	opacity: 1;
+	transform: translateY(0);
+}
+.scrollimation.d1{
+	transition-delay: .2s;
+}
+.scrollimation.d2{
+	transition-delay: .4s;
+}
+.scrollimation.d3{
+	transition-delay: .6s;
+}
+.scrollimation.d4{
+	transition-delay: .8s;
+}
+.touch .scrollimation.fade-in{
+	opacity: 1;
+}
+.touch .scrollimation.scale-in{
+	opacity: 1;
+	transform: scale(1);
+}
+.touch .scrollimation.fade-right{
+	opacity: 1;
+	transform: translateX(0);
+}
+.touch .scrollimation.fade-left{
+	opacity: 1;
+	transform: translateX(0);
+}
+.touch .scrollimation.fade-up{
+	opacity: 1;
+	transform: translateY(0);
+}

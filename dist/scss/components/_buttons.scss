@@ -1,0 +1,40 @@
+/*------------------
+----- Buttons ------
+--------------------*/
+.btn-meflat{
+    width: auto;
+    height: 52px;
+    opacity: .8;
+    margin: 20px 0;
+    padding: 10px 30px;
+    color: $white;
+    font-size: 1.125rem;
+    font-weight: 400;
+	line-height: 28px;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    background-color: $skyblue;
+    font-family: $titillium-web;
+    &:hover,
+    &:active,
+    &:focus{
+        opacity: 1;
+        color: $white;
+        text-decoration: none;
+        background-color: $skyblue;
+    }
+    &.white{
+        font-size: 1.313rem;
+        border: 2px solid $white;
+        transition: all .1s ease-out;
+        background-color: transparent;
+    }
+    &.icon-left [class*=fa-regular],
+    &.icon-left [class*=fa-solid]{
+        margin-right: 10px;
+    }
+    &.icon-right [class*=fa-regular],
+    &.icon-right [class*=fa-solid]{
+        margin-left: 10px;
+    }    
+}
