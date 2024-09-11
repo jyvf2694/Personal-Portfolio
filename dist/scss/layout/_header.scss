@@ -58,13 +58,10 @@
                 width: 40px;
                 height: 35px;
                 padding: 0;
+                display: none;
                 box-shadow: none;
                 border-radius: 0;
                 border: 1px solid $gray;
-
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 &[aria-expanded="true"] .navbar-toggler-icon::before{
                     top: 45%;
                     transform: rotate(45deg);
@@ -75,6 +72,11 @@
                 &[aria-expanded="true"] .navbar-toggler-icon::after{
                     bottom: 50%;
                     transform: rotate(-45deg);
+                }
+                @media (max-width: $tablet){
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
                 .navbar-toggler-icon{
                     width: 25px;
