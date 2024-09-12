@@ -11,19 +11,6 @@ $(document).ready(function(){
 	});
 
 	/*============================================
-	Navigation Language
-	==============================================*/
-	var currentUrl = window.location.pathname;
-    $('.language a').each(function(){
-        if ($(this).attr('href') === currentUrl){
-            $(this).addClass('active');
-        }
-		else{
-            $(this).removeClass('active');
-        }
-    });
-
-	/*============================================
 	Navigation Scroll
 	==============================================*/
 	if ($(window).scrollTop() === 0){
