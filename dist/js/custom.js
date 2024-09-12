@@ -11,7 +11,15 @@ $(document).ready(function(){
 	});
 
 	/*============================================
-	Navigation Functions
+	Navigation Language
+	==============================================*/
+	$('.language a').click(function(){
+		$('.language a').removeClass('active');
+		$(this).addClass('active');
+	});
+
+	/*============================================
+	Navigation Scroll
 	==============================================*/
 	if ($(window).scrollTop() === 0){
 		$('#main-nav').removeClass('scrolled');
@@ -35,7 +43,7 @@ $(document).ready(function(){
     var navItems = $('.nav-item');
 
     $(window).on('scroll', function () {
-        var currentScroll = $(this).scrollTop() + 50;
+        var currentScroll = $(this).scrollTop() + 70;
 
         sections.each(function () {
             var sectionTop = $(this).offset().top;
@@ -50,8 +58,6 @@ $(document).ready(function(){
             }
         });
     });
-
-	
 
 	/*============================================
 	Banner Text Rotator
@@ -254,7 +260,7 @@ $(document).ready(function(){
 	});
 	
 	/*============================================
-	Resize Functions
+	Resize
 	==============================================*/
 	$(window).resize(function(){
 		scrollSpyRefresh();
@@ -262,7 +268,7 @@ $(document).ready(function(){
 	});
 
 	/*============================================
-	Refresh scrollSpy function
+	Refresh scrollSpy
 	==============================================*/
 	function scrollSpyRefresh(){
 		setTimeout(function(){

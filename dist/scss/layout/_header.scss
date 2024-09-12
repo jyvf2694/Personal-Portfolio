@@ -44,6 +44,13 @@
                         }
                     }
                 }
+                .language{
+                    li{
+                        a{
+                            color: $slate;
+                        }
+                    }
+                }
             }
         }
         .navbar-header{
@@ -120,6 +127,7 @@
             }
         }
         #site-nav{
+            position: relative;
             .navbar-nav{
                 display: flex;
                 align-items: center;
@@ -198,6 +206,62 @@
                                 top: 15px;
                                 font-size: 90%;
                                 position: relative;
+                            }
+                        }
+                    }
+                }
+            }
+            .language{
+                right: 0;
+                position: absolute;
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @media (max-width: $tablet){
+                    left: 0;
+                    position: relative;
+                }
+                li{
+                    margin: 0 7.5px;
+                    a{
+                        margin-right: 20px;
+                        color: $white;
+                        font-size: .938rem;
+                        line-height: 54px;
+                        letter-spacing: .01em;
+                        position: relative;
+                        text-transform: uppercase;
+                        @media (max-width: $tablet){
+                            color: $slate;
+                        }
+                        &:before{
+                            content: '';
+                            top: 0;
+                            right: -20px;
+                            bottom: 0;
+                            width: 16px;
+                            height: 16px;
+                            margin: auto;
+                            position: absolute;
+
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: cover;
+                        }
+                        &.active,
+                        &:hover{
+                            color: $skyblue;
+                            font-weight: 700;
+                        }
+                        &.spanish{
+                            &:before{
+                                background-image: url("../../dist/img/others/spanish.png");
+                            }
+                        }
+                        &.english{
+                            &:before{
+                                background-image: url("../../dist/img/others/english.png");
                             }
                         }
                     }
