@@ -225,7 +225,7 @@
                 li{
                     margin: 0 7.5px;
                     a{
-                        margin-right: 20px;
+                        padding-right: 20px;
                         color: $white;
                         font-size: .938rem;
                         line-height: 54px;
@@ -238,7 +238,7 @@
                         &:before{
                             content: '';
                             top: 0;
-                            right: -20px;
+                            right: 0;
                             bottom: 0;
                             width: 16px;
                             height: 16px;
