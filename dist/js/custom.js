@@ -13,10 +13,15 @@ $(document).ready(function(){
 	/*============================================
 	Navigation Language
 	==============================================*/
-	$('.language a').click(function(){
-		$('.language a').removeClass('active');
-		$(this).addClass('active');
-	});
+	var currentUrl = window.location.pathname;
+    $('.language a').each(function(){
+        if ($(this).attr('href') === currentUrl){
+            $(this).addClass('active');
+        }
+		else{
+            $(this).removeClass('active');
+        }
+    });
 
 	/*============================================
 	Navigation Scroll
