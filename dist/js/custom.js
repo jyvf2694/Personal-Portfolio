@@ -277,3 +277,12 @@ $(document).ready(function(){
 		}, 1000);
 	}
 });
+
+/*============================================
+Close Project Preview
+==============================================*/
+$(document).on('click', function(event) {
+    if (!$(event.target).closest('.modal-dialog').length) {
+        $('#project-modal').modal('hide');
+    }
+});
